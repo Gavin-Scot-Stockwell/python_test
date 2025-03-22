@@ -55,7 +55,8 @@ def place_order(menu):
         order = update_order(order, menu_selection, menu_items)
 
         # TODO: Ask the customer if they would like to order anything else
-        if input("Would you like to order anything else? (y/n) ") == 'n' or 'N':
+        order_more = input("Would you like to order anything else? (yes/no) ")
+        if order_more.lower() == "n":
             break
         else:
             continue
